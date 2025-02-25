@@ -1,0 +1,16 @@
+# Diccionario con los usuarios y sus respectivas claves
+usuarios = {
+    "USER": "123",
+    "ADMIN": "456",
+    "ROOT": "789"
+}
+
+# Solicitar credenciales al usuario
+usuario = input("Ingrese su usuario: ").upper()  # Convertir a mayúsculas para evitar errores
+clave = input("Ingrese su clave: ")
+
+# Verificar credenciales
+if usuario in usuarios and usuarios[usuario] == clave:
+    print("Acceso concedido. Bienvenido", usuario)
+else:
+    print("Acceso denegado. Usuario o clave incorrectos.")

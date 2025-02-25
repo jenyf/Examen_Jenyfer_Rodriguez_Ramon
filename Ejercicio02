@@ -1,0 +1,24 @@
+# Diccionario con los precios según especialidad y turno
+precios = {
+    ("Medicina", "Mañana"): 100,
+    ("Medicina", "Tarde"): 140,
+    ("Pediatría", "Mañana"): 80,
+    ("Pediatría", "Tarde"): 120
+}
+
+# Solicitar datos al paciente
+nombre = input("Ingrese el nombre del paciente: ")
+especialidad = input("Ingrese la especialidad (Medicina/Pediatría): ").capitalize()
+turno = input("Ingrese el turno (Mañana/Tarde): ").capitalize()
+
+# Verificar y obtener el precio
+clave = (especialidad, turno)
+if clave in precios:
+    precio = precios[clave]
+    print(f"\nRegistro de cita:")
+    print(f"Paciente: {nombre}")
+    print(f"Especialidad: {especialidad}")
+    print(f"Turno: {turno}")
+    print(f"Precio: s/ {precio}")
+else:
+    print("Especialidad o turno inválidos. Intente nuevamente.")
